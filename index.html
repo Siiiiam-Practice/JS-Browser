@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+    <div class="input input-bordered input-secondary  w-[70%] my-5 flex justify-between mx-auto">
+        <input id="getLink" type="text"  placeholder="Type Website" class="w-full outline-none justify-start" style="background: 00000000; " />
+    </div>
+
+    <div id=""  class="w-full h-full">
+        <iframe id="iFrame" class="min-w-[85vw] min-h-[85vh] border-[3px] rounded-[10px] mx-auto" src="https://web.programming-hero.com/dashboard">
+        </iframe>
+    </div>
+    <script>
+        const diviFrame = document.getElementById('iFrame');
+        let link = document.getElementById('getLink');
+
+        document.addEventListener('keyup', function() {
+            diviFrame.src = link.value;
+        })
+    </script>
+</body>
+</html>
